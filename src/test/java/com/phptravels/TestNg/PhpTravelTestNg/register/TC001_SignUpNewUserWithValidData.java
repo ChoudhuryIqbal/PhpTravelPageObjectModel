@@ -7,6 +7,7 @@ import java.io.IOException;
 
 import org.apache.log4j.Logger;
 import org.testng.Assert;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
@@ -37,6 +38,10 @@ public class TC001_SignUpNewUserWithValidData extends TestBase {
 		log.info("=========== Finished signUpNewUserWithValidData Test=============");
 		
 	}
-	@
+	@AfterClass
+	public void closeBrowser() {
+		driver.quit();
+	}
+	
 
 }
