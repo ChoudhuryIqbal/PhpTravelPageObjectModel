@@ -37,6 +37,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
 
+import com.phptravels.TestNg.PhpTravelTestNg.customListener.WebEventListener;
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
@@ -52,7 +53,7 @@ public class TestBase {
 
 	public WebDriver driver;
 	//Excel_Reader excel;
-	//public WebEventListener eventListener;
+	public WebEventListener eventListener;
 	public Properties OR = new Properties();
 	public static ExtentReports extent;
 	public static ExtentTest test;
