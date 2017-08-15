@@ -38,6 +38,7 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
 
 import com.phptravels.TestNg.PhpTravelTestNg.customListener.WebEventListener;
+import com.phptravels.TestNg.PhpTravelTestNg.excelReader.Excel_Reader;
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
@@ -52,7 +53,7 @@ public class TestBase {
 	public static final Logger log = Logger.getLogger(TestBase.class.getName());
 
 	public WebDriver driver;
-	//Excel_Reader excel;
+	Excel_Reader excel;
 	public WebEventListener eventListener;
 	public Properties OR = new Properties();
 	public static ExtentReports extent;
@@ -131,12 +132,12 @@ public class TestBase {
 		//driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	}
 
-	/*public String[][] getData(String excelName, String sheetName) {
-		String path = System.getProperty("user.dir") + "/src/main/java/com/test/automation/uiAutomation/data/" + excelName;
+	public String[][] getData(String excelName, String sheetName) {
+		String path = System.getProperty("user.dir") + "/src/main/java/com/phptravels/TestNg/PhpTravelTestNg/data/" + excelName;
 		excel = new Excel_Reader(path);
 		String[][] data = excel.getDataFromSheet(sheetName, excelName);
 		return data;
-	}*/
+	}
 
 	public void waitForElement(WebDriver driver, int timeOutInSeconds, WebElement element) {
 		WebDriverWait wait = new WebDriverWait(driver, timeOutInSeconds);
