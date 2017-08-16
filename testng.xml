@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Regression">
+<listeners>
+<!-- <listener class-name="com.phptravels.TestNg.PhpTravelTestNg.customListener.Listener"></listener>  -->
+<listener class-name="com.phptravels.TestNg.PhpTravelTestNg.customListener.RetryListener"></listener> 
+</listeners>
+  <test name="Test">
+    <classes>
+      <class name="com.phptravels.TestNg.PhpTravelTestNg.register.TC001_SignUpNewUserWithValidData"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
