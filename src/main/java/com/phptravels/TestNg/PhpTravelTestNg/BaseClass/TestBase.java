@@ -67,7 +67,7 @@ public class TestBase {
 	static {
 		Calendar calendar = Calendar.getInstance();
 		SimpleDateFormat formater = new SimpleDateFormat("dd_MM_yyyy_hh_mm_ss");
-		extent = new ExtentReports(System.getProperty("user.dir") + "\\src\\main\\java\\com\\phptravels\\TestNg\\PhpTravelTestNg\\report\\test" + formater.format(calendar.getTime()) + ".html", false);
+		extent = new ExtentReports(System.getProperty("user.dir") + "\\src\\main\\java\\com\\phptravels\\TestNg\\PhpTravelTestNg\\report\\test" + formater.format(calendar.getTime()) + ".html", true);
 	}
 
 	public void loadData() throws IOException {
